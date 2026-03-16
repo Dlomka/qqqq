@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2c1a1d 0%, #4a2a30 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 450px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(30, 15, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    padding: 30px 20px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.7), 0 0 0 3px #ff88aa;
+    border: 2px solid #ffb6c1;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #ffd9e5;
+    text-shadow: 0 3px 0 #aa2a4a, 0 5px 0 #4a1424;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #ffb6c1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: 2px solid #ff4477;
+    background: #2a181f;
+    color: white;
+    font-size: 1rem;
+}
+
+.room-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.btn-primary {
+    background: #ff4477;
+    color: white;
+    box-shadow: 0 4px 0 #771133;
+}
+
+.btn-secondary {
+    background: #332229;
+    color: #ffb6c1;
+    border: 2px solid #ff88aa;
+}
+
+.btn-primary:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.players-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.player {
+    flex: 1;
+    background: #2f1e26;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    border: 2px solid #ff99aa;
+}
+
+.player .player-name {
+    font-size: 1.2rem;
+    color: #ffc0cb;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.player .player-status {
+    font-size: 0.9rem;
+    color: #a0747f;
+}
+
+.vs {
+    font-size: 1.5rem;
+    color: #ff88aa;
+}
+
+.link-box {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.link-box input {
+    flex: 1;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.btn-copy {
+    padding: 0 20px;
+    background: #ff88aa;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.waiting-message {
+    text-align: center;
+    color: #ffb6c1;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-player {
+    text-align: center;
+    flex: 1;
+}
+
+.game-player .player-name {
+    font-size: 1.2rem;
+    color: #ffc0cb;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.game-player .player-turn {
+    font-size: 0.9rem;
+    color: #a0747f;
+}
+
+.game-vs {
+    font-size: 1.5rem;
+    color: #ff88aa;
+    padding: 0 10px;
+}
+
+.question-counter {
+    text-align: center;
+    color: #ffb6c1;
+    margin: 20px 0;
+    font-size: 1.1rem;
+}
+
+.question-block {
+    margin-bottom: 20px;
+}
+
+.question-text {
+    background: #ffeef2;
+    border-radius: 30px;
+    padding: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2f1420;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: 3px solid #ff4477;
+    background: #2a181f;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+.waiting-block {
+    text-align: center;
+    padding: 40px;
+}
+
+.spinner {
+    font-size: 3rem;
+    animation: spin 1.5s infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.answer-block {
+    background: #ffd9e5;
+    border-radius: 30px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.answer-question {
+    font-size: 1rem;
+    color: #550022;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.answer-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #ff2277;
+    margin: 20px 0;
+    text-align: center;
+    word-break: break-word;
+}
+
+.answer-from {
+    color: #771133;
+    text-align: right;
+    font-style: italic;
+}
